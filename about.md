@@ -1,13 +1,18 @@
+# about.md
 ---
-layout: default
-title: About Me
+layout: page
+title: About
+permalink: /about/
 ---
+
 # About Me
 
-I'm Toye, a software engineer with experience in full-stack development, product security, and game design.
-Here's a [PDF of my resume](assets/Akintoye_Adesomoju_resume.pdf).
+Software Engineer with experience in full-stack development, cloud technologies, and data analytics. Currently working at Mueller Water Products, focusing on front-end engineering, back-end development, and product security.
 
-## Skills
-- Python, JavaScript, TypeScript, C#
-- React, AngularJS, Next.js
-- REST & GraphQL API development
+## Skills & Expertise
+- **Programming Languages**: Python, JavaScript/TypeScript, C#, Lua, Java
+- **Web Development**: AngularJS, React, SolidJS, NextJS
+- **Cloud & DevOps**: AWS, Azure, Kubernetes
+- **Data Analytics**: PowerBI, Tableau
+
+[View Full Resume](/resume)

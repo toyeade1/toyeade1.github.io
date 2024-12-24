@@ -1,4 +1,19 @@
-title: Toye's Website
-description: Software Engineer and Game Developer
+# _config.yml
+title: Akintoye Adesomoju
+description: Software Engineer | Data Analytics
+baseurl: ""
+url: ""
 theme: minima
-markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Custom theme settings
+darkmode: true
+font-family: 'Inter, sans-serif'
+
+# collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title
