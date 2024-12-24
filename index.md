@@ -1,11 +1,9 @@
 ---
 layout: home
-title: Home
+title: Welcome to Toye's Page
 ---
+![Cabin in the trees](assets/cabin.jpg)
 
-<div class="home-container">
-  <img src="assets/images/cabin.png" alt="Cabin in the trees" class="hero-image">
-  <h1>Hi, I'm Akintoye</h1>
-  <p>Software Engineer based in Atlanta, passionate about building scalable applications and data analytics.</p>
-  <div id="graph-container"></div>
-</div>
+## Welcome
+Hello, I'm Toye, a software engineer passionate about AI, machine learning, and game development.
+[Learn more about me here](about.md).
