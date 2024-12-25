@@ -1,5 +1,5 @@
 ---
-Getting Started
+title: Getting Started
 ---
 ![Cabin in the trees](assets/cabin.jpg)
 

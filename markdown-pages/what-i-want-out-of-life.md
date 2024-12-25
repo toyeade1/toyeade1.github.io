@@ -1,5 +1,5 @@
 ---
-What I Want Out Of Life
+title: "What I Want Out Of Life"
 ---
 ![Cabin in the trees](assets/cabin.jpg)
 
