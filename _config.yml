@@ -2,7 +2,7 @@ title: Your Site Title
 description: >-
   A personal site for sharing my thoughts and experiences.
 baseurl: ""
-url: ""
+url: "https://toyeade1.github.io"
 theme: jekyll-theme-primer
 plugins:
   - jekyll-seo-tag

@@ -1,5 +1,6 @@
 import { Section, GraphData } from './types';
 
+
 export const sections: Section[] = [
   {
     id: 'topics',
@@ -73,13 +74,14 @@ export const graphData: GraphData = {
   )
 };
 
-export async function getContent(section?: string, slug?: string): Promise<string | null> {
+export async function getContent(section?: string, slug?: string) {
   if (!section || !slug) return null;
+  const baseUrl = import.meta.env.BASE_URL;
   try {
-    const response = await fetch(`http://localhost:3000/api/content?section=${section}&slug=${slug}`);
+    const response = await fetch(`${baseUrl}/markdown-pages/${slug}.md`);
     if (!response.ok) throw new Error('Failed to fetch content');
-    const data = await response.json();
-    return data.content;
+    const data = await response.text();
+    return data;
   } catch (error) {
     console.error(error);
     return null;
