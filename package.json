@@ -5,6 +5,7 @@
   "license": "MIT",
   "homepage": "https://toyeade1.github.io",
   "scripts": {
+    "ascend": "npm run build && npm run deploy",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "tsx server/index.ts",
