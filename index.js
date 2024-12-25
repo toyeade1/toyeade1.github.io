@@ -41,14 +41,29 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import themePlugin from "@replit/vite-plugin-shadcn-theme-json";
 import mdPlugin from "vite-plugin-md";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 import path2, { dirname as dirname2 } from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { fileURLToPath as fileURLToPath2 } from "url";
 var __filename2 = fileURLToPath2(import.meta.url);
 var __dirname2 = dirname2(__filename2);
 var vite_config_default = defineConfig({
-  base: "/",
-  plugins: [react(), runtimeErrorOverlay(), mdPlugin(), themePlugin()],
+  base: "/toye.github.io/",
+  // Update this to match your repo name
+  plugins: [
+    react(),
+    runtimeErrorOverlay(),
+    mdPlugin(),
+    themePlugin(),
+    viteStaticCopy({
+      targets: [
+        {
+          src: path2.resolve(__dirname2, "public/markdown-pages/*"),
+          dest: "markdown-pages"
+        }
+      ]
+    })
+  ],
   resolve: {
     alias: {
       "@db": path2.resolve(__dirname2, "db"),
