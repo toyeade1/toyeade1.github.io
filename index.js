@@ -48,7 +48,7 @@ import { fileURLToPath as fileURLToPath2 } from "url";
 var __filename2 = fileURLToPath2(import.meta.url);
 var __dirname2 = dirname2(__filename2);
 var vite_config_default = defineConfig({
-  base: "/toye.github.io/",
+  base: "/toyeade1.github.io/",
   // Update this to match your repo name
   plugins: [
     react(),
