@@ -48,7 +48,7 @@ import { fileURLToPath as fileURLToPath2 } from "url";
 var __filename2 = fileURLToPath2(import.meta.url);
 var __dirname2 = dirname2(__filename2);
 var vite_config_default = defineConfig({
-  base: "/",
+  base: process.env.NODE_ENV === "production" ? "/toyeade1.github.io/" : "/",
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -58,7 +58,7 @@ var vite_config_default = defineConfig({
       targets: [
         {
           src: path2.resolve(__dirname2, "public/markdown-pages/*"),
-          dest: "markdown-pages"
+          dest: "./"
         }
       ]
     })
