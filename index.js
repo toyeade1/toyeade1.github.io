@@ -76,10 +76,19 @@ var vite_config_default = defineConfig({
     rollupOptions: {
       output: {
         format: "es",
-        entryFileNames: `assets/[name]-[hash].js`,
-        chunkFileNames: `assets/[name]-[hash].js`,
+        entryFileNames: `assets/[name]-[hash].mjs`,
+        chunkFileNames: `assets/[name]-[hash].mjs`,
         assetFileNames: `assets/[name]-[hash].[ext]`
       }
+    },
+    target: "esnext",
+    modulePreload: {
+      polyfill: true
+    }
+  },
+  esbuild: {
+    supported: {
+      "top-level-await": true
     }
   }
 });
