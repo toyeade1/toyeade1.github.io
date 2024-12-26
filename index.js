@@ -72,7 +72,15 @@ var vite_config_default = defineConfig({
   root: path2.resolve(__dirname2, "client"),
   build: {
     outDir: path2.resolve(__dirname2, "dist"),
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        format: "es",
+        entryFileNames: `assets/[name]-[hash].js`,
+        chunkFileNames: `assets/[name]-[hash].js`,
+        assetFileNames: `assets/[name]-[hash].[ext]`
+      }
+    }
   }
 });
 
