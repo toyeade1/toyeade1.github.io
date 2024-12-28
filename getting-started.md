@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 ---
-![Cabin in the trees](assets/cabin.jpg)
+![Cabin in the trees](assets/images/oil-painting.jpg)
 
 ## Whats my Story.
 Hi, I'm Toye, a software engineer very interested in AI, finance, cryptocurrency mechanics, and game development.
