@@ -72,24 +72,7 @@ var vite_config_default = defineConfig({
   root: path2.resolve(__dirname2, "client"),
   build: {
     outDir: path2.resolve(__dirname2, "dist"),
-    emptyOutDir: true,
-    rollupOptions: {
-      output: {
-        format: "es",
-        entryFileNames: `assets/[name]-[hash].mjs`,
-        chunkFileNames: `assets/[name]-[hash].mjs`,
-        assetFileNames: `assets/[name]-[hash].[ext]`
-      }
-    },
-    target: "esnext",
-    modulePreload: {
-      polyfill: true
-    }
-  },
-  esbuild: {
-    supported: {
-      "top-level-await": true
-    }
+    emptyOutDir: true
   }
 });
 
