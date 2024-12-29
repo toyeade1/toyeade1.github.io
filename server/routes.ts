@@ -8,6 +8,7 @@ import { dirname } from "path";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+
 export function registerRoutes(app: Express): Server {
   // put application routes here
   // prefix all routes with /api
@@ -22,6 +23,7 @@ export function registerRoutes(app: Express): Server {
 
     try {
       const filePath = path.resolve(__dirname, '..', 'markdown-pages', `${slug}.md`);
+      console.log('Reading content from:', filePath);
       const content = fs.readFileSync(filePath, 'utf-8');
       res.status(200).json({ content });
     } catch (error) {

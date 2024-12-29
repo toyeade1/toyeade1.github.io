@@ -10,18 +10,29 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 export default defineConfig({
-  base: "/toyeade1.github.io/", 
+  base: '/',
   plugins: [
     react(),
     runtimeErrorOverlay(),
     mdPlugin(),
     themePlugin(),
     viteStaticCopy({
+      //getting the files i would like and copying them to the root directory of the dist folder
       targets: [
         {
           src: path.resolve(__dirname, 'public/markdown-pages/*'),
-          dest: 'markdown-pages'
+          dest: './'
+        },
+        {
+          src: path.resolve(__dirname, 'public/assets/*'),
+          dest: './assets'
+        },
+        {
+          src: path.resolve(__dirname, '.nojekyll'),
+          dest: './'
         }
       ]
     })
@@ -36,11 +47,6 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
-    rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, 'client/index.html'),
-        fallback: path.resolve(__dirname, 'public/404.html')
-      }
-    }
+    // assetsDir: 'assets',
   },
 });

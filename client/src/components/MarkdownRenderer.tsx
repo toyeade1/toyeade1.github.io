@@ -29,10 +29,15 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
             </code>
           );
         },
-        img({ node, ...props }) {
+        img({ node, src, ...props }) {
+          let imageSrc = src;
+          if (src?.startsWith('assets/')) {
+            imageSrc = `/${src}`;
+          }
           return (
             <img
               {...props}
+              src={imageSrc}
               style={{ maxWidth: '100%', height: 'auto' }}
               alt={props.alt || ''}
             />

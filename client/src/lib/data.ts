@@ -1,32 +1,28 @@
 import { Section, GraphData } from './types';
 
+function getBaseUrl() {
+  return '';
+}
 
 export const sections: Section[] = [
   {
-    id: 'topics',
-    title: 'Topics',
+    id: 'intro',
+    title: 'Introductions',
     items: [
       {
         title: 'Getting Started',
         slug: 'getting-started',
-        path: '/topics/getting-started',
+        path: '/intro/getting-started',
         content: '',
         datePosted: '2023-10-10' // Example date
       },
       {
         title: 'A Little Bit About Me',
         slug: 'a-little-bit-about-me',
-        path: '/topics/a-little-bit-about-me',
+        path: '/intro/a-little-bit-about-me',
         content: ``,
         datePosted: '2023-10-10' // Today's date
       },
-      {
-        title: 'What I Want Out of Life',
-        slug: 'what-i-want-out-of-life',
-        path: '/topics/what-i-want-out-of-life',
-        content: '',
-        datePosted: '2023-10-10' // Today's date
-      }
     ]
   },
   {
@@ -37,19 +33,34 @@ export const sections: Section[] = [
         title: 'Weekly Reflections',
         slug: 'weekly-reflections',
         path: '/learning/weekly-reflections',
-        content: `# Weekly Learning Reflections\n\nDocumenting my journey...`
+        content: '',
+        datePosted: '2024-12-27'
+      },
+      {
+        title: 'Providing Context to LLMs',
+        slug: 'providing-context-to-llms',
+        path: '/learning/providing-context-to-llms',
+        content: '',
+        datePosted: '2024-12-28'
       }
     ]
   },
   {
-    id: 'study',
-    title: 'Tools and Methods',
+    id: 'tools',
+    title: 'Tools',
     items: [
       {
         title: 'Task Management',
         slug: 'task-management',
-        path: '/study/task-management',
-        content: `# Task Management\n\nHow I manage my tasks...`
+        path: '/tools/task-management',
+        content: ``,
+      },
+      {
+        title: 'What I Want Out of Life',
+        slug: 'what-i-want-out-of-life',
+        path: '/tools/what-i-want-out-of-life',
+        content: '',
+        datePosted: '2024-12-28' // Today's date
       }
     ]
   }
@@ -74,16 +85,25 @@ export const graphData: GraphData = {
   )
 };
 
+// Update getContent function
 export async function getContent(section?: string, slug?: string) {
   if (!section || !slug) return null;
-  const baseUrl = import.meta.env.BASE_URL;
+  
   try {
-    const response = await fetch(`${baseUrl}/markdown-pages/${slug}.md`);
-    if (!response.ok) throw new Error('Failed to fetch content');
+    const baseUrl = getBaseUrl();
+    const response = await fetch(`${baseUrl}/${slug}.md`);
+    console.log('Fetching content from:', response); 
+
+    
+    if (!response.ok) {
+      console.error(`Failed to fetch content: ${response.status}`);
+      throw new Error('Failed to fetch content');
+    }
+    
     const data = await response.text();
     return data;
   } catch (error) {
-    console.error(error);
+    console.error('Content fetch error:', error);
     return null;
   }
 }

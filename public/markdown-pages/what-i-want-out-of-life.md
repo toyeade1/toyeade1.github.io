@@ -1,7 +1,7 @@
 ---
 title: "What I Want Out Of Life"
 ---
-![Cabin in the trees](assets/cabin.jpg)
+![Cabin in the trees](assets/images/ab-4.jpg)
 
 ## Welcome
 Hi, I'm Toye, a software engineer very interested in AI, finance, cryptocurrency mechanics, and game development.
