@@ -38,6 +38,12 @@ export function Sidebar() {
           </div>
         ))}
       </nav>
+
+      <div className="mt-8">
+        <Button variant="secondary" className="w-full">
+            <a href="https://toyeade1.bearblog.dev/">Digital Garden Blog</a>
+        </Button>
+      </div>
     </aside>
   );
 }

@@ -9,13 +9,13 @@ export const sections: Section[] = [
     id: 'intro',
     title: 'Introductions',
     items: [
-      {
-        title: 'Getting Started',
-        slug: 'getting-started',
-        path: '/intro/getting-started',
-        content: '',
-        datePosted: '2023-10-10' // Example date
-      },
+      // {
+      //   title: 'Getting Started',
+      //   slug: 'getting-started',
+      //   path: '/intro/getting-started',
+      //   content: '',
+      //   datePosted: '2023-10-10' // Example date
+      // },
       {
         title: 'A Little Bit About Me',
         slug: 'a-little-bit-about-me',
@@ -23,19 +23,26 @@ export const sections: Section[] = [
         content: ``,
         datePosted: '2023-10-10' // Today's date
       },
+      {
+        title: 'Socials',
+        slug: 'my-socials',
+        path: '/intro/my-socials',
+        content: ``,
+        datePosted: '2025-1-10' // Today's date
+      }
     ]
   },
   {
     id: 'learning',
     title: 'Learning',
     items: [
-      {
-        title: 'Weekly Reflections',
-        slug: 'weekly-reflections',
-        path: '/learning/weekly-reflections',
-        content: '',
-        datePosted: '2024-12-27'
-      },
+      // {
+      //   title: 'Weekly Reflections',
+      //   slug: 'weekly-reflections',
+      //   path: '/learning/weekly-reflections',
+      //   content: '',
+      //   datePosted: '2024-12-27'
+      // },
       {
         title: 'Providing Context to LLMs',
         slug: 'providing-context-to-llms',
@@ -55,13 +62,26 @@ export const sections: Section[] = [
         path: '/tools/task-management',
         content: ``,
       },
+      // {
+      //   title: 'What I Want Out of Life',
+      //   slug: 'what-i-want-out-of-life',
+      //   path: '/tools/what-i-want-out-of-life',
+      //   content: '',
+      //   datePosted: '2024-12-28' // Today's date
+      // }
+    ]
+  },
+  {
+    id: 'stack',
+    title: 'Tech Stack(s)',
+    items: [
       {
-        title: 'What I Want Out of Life',
-        slug: 'what-i-want-out-of-life',
-        path: '/tools/what-i-want-out-of-life',
+        title: 'This Site',
+        slug: 'this-site',
+        path: '/stack/this-site',
         content: '',
-        datePosted: '2024-12-28' // Today's date
-      }
+        datePosted: '2024-12-31'
+      },
     ]
   }
 ];

@@ -1,10 +1,20 @@
----
-title: "What I Want Out Of Life"
----
-![Cabin in the trees](/images/oil-painting.jpg)
 
-## Welcome
-Hi, I'm Toye, a software engineer very interested in AI, finance, cryptocurrency mechanics, and game development.
+---
 
-I graduated at Georgia State University with a Degree in Advanced Analytics and a minor in finance.
-[Learn more about me here](about.md).
+# Task Management
+### Tools that help me stay organized on tasks
+
+---
+![Cabin in the trees](../assets/images/ab-3.jpg)
+
+## Notion
+This is a life-saver and something I use daily to track my tasks and objectives. It allows you to customize your experience, or use a template that suits your needs. 
+
+This is my current daily planner view on notion.
+![Notion](../assets/images/notion.png)
+
+The planner allows me to:
+- Score my day ~ (pass/fail) so I know if I am deviating in my focus
+- Prioritize tasks and projects to make sure timelines align
+
+Will try and make it available on this page incase anyone feels they could benefit from the organization

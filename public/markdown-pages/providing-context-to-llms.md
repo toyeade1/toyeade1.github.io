@@ -29,9 +29,14 @@ This could come in handy when debugging an issue that might connect to multiple 
 
 ### Basic Usage
 
+Download and Install uv (~__optional__)
+```bash
+pip install uv
+```
+
 Generate a directory structure:
 ```bash
-python repo_analyzer.py /path/to/repo output.txt
+uv run repo_analyzer.py /path/to/repo output.txt
 ```
 
 ### Including File Contents
@@ -39,19 +44,19 @@ python repo_analyzer.py /path/to/repo output.txt
 Include specific files:
 ```bash
 # Include a single file
-python repo_analyzer.py /path/to/repo output.txt -i "main.py"
+uv run repo_analyzer.py /path/to/repo output.txt -i "main.py"
 
 # Include multiple files
-python repo_analyzer.py /path/to/repo output.txt -i "main.py" -i "config.json"
+uv run repo_analyzer.py /path/to/repo output.txt -i "main.py" -i "config.json"
 
 # Include files in nested directories
-python repo_analyzer.py /path/to/repo output.txt -i "src/client/app.py"
+uv run repo_analyzer.py /path/to/repo output.txt -i "src/client/app.py"
 
 # Include all Python files in a specific directory
-python repo_analyzer.py /path/to/repo output.txt -i "src/client/*.py"
+uv run repo_analyzer.py /path/to/repo output.txt -i "src/client/*.py"
 
 # Include a file regardless of its location
-python repo_analyzer.py /path/to/repo output.txt -i "**/config.yaml"
+uv run repo_analyzer.py /path/to/repo output.txt -i "**/config.yaml"
 ```
 
 ### Excluding Directories/Files
@@ -60,10 +65,10 @@ The tool automatically excludes common unnecessary directories (.git, __pycache_
 
 ```bash
 # Exclude specific directories
-python repo_analyzer.py /path/to/repo output.txt -e "tests" -e "docs"
+uv run repo_analyzer.py /path/to/repo output.txt -e "tests" -e "docs"
 
 # Combine exclusions with includes
-python repo_analyzer.py /path/to/repo output.txt -e "tests" -i "src/**/*.py"
+uv run repo_analyzer.py /path/to/repo output.txt -e "tests" -i "src/**/*.py"
 ```
 
 ### Pattern Matching
@@ -132,7 +137,7 @@ The following directories are excluded by default:
 You can combine multiple include and exclude patterns:
 
 ```bash
-python repo_analyzer.py /path/to/repo output.txt \
+uv run repo_analyzer.py /path/to/repo output.txt \
     -i "src/**/*.py" \
     -i "config/*.yaml" \
     -e "tests" \
@@ -145,7 +150,7 @@ When using the output with LLMs for debugging or analysis, you might want to:
 
 1. Include relevant configuration files:
 ```bash
-python repo_analyzer.py /path/to/repo output.txt \
+uv run repo_analyzer.py /path/to/repo output.txt \
     -i "**/config.yaml" \
     -i "**/settings.json" \
     -i "requirements.txt"
@@ -153,7 +158,7 @@ python repo_analyzer.py /path/to/repo output.txt \
 
 2. Include specific modules and their tests:
 ```bash
-python repo_analyzer.py /path/to/repo output.txt \
+uv run repo_analyzer.py /path/to/repo output.txt \
     -i "src/auth/*.py" \
     -i "tests/test_auth.py"
 ```

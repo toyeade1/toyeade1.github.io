@@ -21,20 +21,18 @@ export function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="flex min-h-screen">
       <Sidebar />
-      <main className="flex-1 p-6">{children}</main>
-      <div className="fixed right-0 w-[400px] h-screen">
+      <main className="flex-1 p-6">{children}
         <div className="p-4">
           <Button
             variant="ghost"
             size="icon"
             onClick={() => setIsDark(!isDark)}
-            className="absolute left-2 bottom-2"
+            className=" fixed left-0 bottom-0"
           >
             {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </Button>
         </div>
-        <ForceGraph />
-      </div>
+          </main>
     </div>
   );
 }
